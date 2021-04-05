@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace GradeBook
 {
@@ -6,14 +7,16 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
-            if (args.Length > 0)
-            {
-                Console.WriteLine($"Hola, {args[0]}!");
-            }
-            else
-            {
-                Console.WriteLine("Hola Mundo!");
-            }
+            Book book = new Book("Math's book");
+
+            book.AddGrade(89.1);
+            book.AddGrade(90.5);
+            book.AddGrade(77.5);
+            book.AddGrade(90.3);
+
+            book.ShowStats();
+
         }
+          
     }
 }
